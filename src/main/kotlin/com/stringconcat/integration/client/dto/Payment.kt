@@ -1,4 +1,4 @@
-package com.stringconcat.integration.dto
+package com.stringconcat.integration.client.dto
 
 import java.math.BigDecimal
 import java.time.OffsetDateTime

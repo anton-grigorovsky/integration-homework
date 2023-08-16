@@ -1,7 +1,7 @@
-package com.stringconcat.integration.dto
+package com.stringconcat.integration.client.dto
 
 import com.fasterxml.jackson.annotation.JsonProperty
-import java.util.UUID
+import java.util.*
 
 class GatewayPayment(payment: Payment) {
     @field:JsonProperty

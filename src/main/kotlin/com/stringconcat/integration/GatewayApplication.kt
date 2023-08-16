@@ -5,15 +5,17 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.client.SimpleClientHttpRequestFactory
+import org.springframework.retry.annotation.EnableRetry
 import org.springframework.web.client.RestTemplate
 import java.net.InetSocketAddress
 import java.net.Proxy
-import org.springframework.retry.annotation.EnableRetry
 
 @Configuration
 @EnableRetry
-class GatewayApplication(@Value("\${remote.server.host}") val host: String,
-                         @Value("\${remote.server.port}") val port: String) {
+class GatewayApplication(
+    @Value("\${remote.server.host}") val host: String,
+    @Value("\${remote.server.port}") val port: String
+) {
 
     @Bean
     fun restTemplate(): RestTemplate {
